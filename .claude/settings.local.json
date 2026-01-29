@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open:*)",
+      "mcp__Control_Chrome__get_current_tab",
+      "mcp__Control_Chrome__open_url",
+      "mcp__Control_Chrome__get_page_content",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
