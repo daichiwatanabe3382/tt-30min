@@ -710,53 +710,57 @@ input, select, textarea {
   padding: 80px 0;
 }
 
-.problem-layout {
+.problem-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.problem-cards {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 16px;
 }
 
-.problem-left {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.problem-title {
-  font-family: var(--font-primary);
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 1.1;
-  color: var(--color-text-body);
-}
-
-.problem-statement {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 2.2;
-  color: var(--color-text-body);
-  text-transform: uppercase;
-}
-
-.problem-right {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.problem-box {
-  background: var(--color-bg-secondary);
+.problem-card {
+  background: white;
+  border: 2px solid var(--color-border);
   border-radius: var(--radius-card);
-  padding: 40px;
-  font-family: var(--font-primary);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.problem-card-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-bg-secondary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.problem-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-text-body);
+}
+
+.problem-card-desc {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.25;
-  color: black;
+  line-height: 1.75;
+  color: var(--color-text-desc);
 }
 
-.problem-box-bold {
+.problem-closing {
+  text-align: center;
   font-weight: 700;
+  font-size: 18px;
+  color: var(--color-text-body);
+  margin-top: 48px;
 }
 
 @media (min-width: 769px) {
@@ -764,32 +768,30 @@ input, select, textarea {
     padding: 160px 16px;
   }
 
-  .problem-layout {
+  .problem-cards {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    gap: 24px;
+    max-width: var(--container-max);
+    margin: 0 auto;
   }
 
-  .problem-left {
+  .problem-card {
     flex: 1;
-    gap: 80px;
+    padding: 40px;
+    gap: 16px;
   }
 
-  .problem-right {
-    flex: 1;
+  .problem-card-title {
+    font-size: 20px;
   }
 
-  .problem-title {
-    font-size: 56px;
+  .problem-card-desc {
+    font-size: 15px;
   }
 
-  .problem-statement {
-    font-size: 16px;
-  }
-
-  .problem-box {
-    padding: 104px;
-    font-size: 16px;
+  .problem-closing {
+    font-size: 22px;
+    margin-top: 64px;
   }
 }
 
@@ -798,35 +800,163 @@ input, select, textarea {
    ================================ */
 .feature {
   padding: 80px 0;
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
 }
 
 .feature-heading {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 56px;
 }
 
 .feature-desc {
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.25;
+  line-height: 1.75;
   color: var(--color-text-desc);
   text-align: center;
 }
 
-.feature-diagram {
-  margin-bottom: 80px;
+/* --- Feature Loop Diagram --- */
+.feature-loop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  position: relative;
 }
 
-.feature-diagram-placeholder {
-  background: #ededed;
+.feature-loop-card {
+  background: white;
   border-radius: var(--radius-card);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   width: 100%;
-  height: 300px;
+  position: relative;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+.feature-loop-step {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  background: var(--color-text-body);
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+}
+
+.feature-loop-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-loop-icon--blue {
+  background: #e8eaf6;
+}
+
+.feature-loop-icon--yellow {
+  background: #fff8e1;
+}
+
+.feature-loop-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-text-body);
+}
+
+.feature-loop-desc {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--color-text-desc);
+}
+
+.feature-loop-underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--color-text-body);
+  font-weight: 700;
+}
+
+.feature-loop-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.feature-loop-tag--blue {
+  background: #e8eaf6;
+  color: var(--color-text-body);
+}
+
+.feature-loop-tag--yellow {
+  background: #fff8e1;
+  color: var(--color-gold);
+}
+
+/* Center circle */
+.feature-loop-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin: -16px 0;
+}
+
+.feature-loop-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--color-text-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.feature-loop-circle-text {
+  font-weight: 700;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+
+/* Closing text */
+.feature-closing {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-text-body);
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.feature-closing-highlight {
+  background: linear-gradient(transparent 60%, #ffe27b 60%);
+  padding: 0 4px;
 }
 
 .feature-cta {
@@ -921,10 +1051,42 @@ input, select, textarea {
     font-size: 16px;
   }
 
-  .feature-diagram-placeholder {
-    height: 483px;
-    max-width: 988px;
-    margin: 0 auto;
+  .feature-loop {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .feature-loop-card {
+    flex: 1;
+    padding: 48px 40px;
+    gap: 16px;
+  }
+
+  .feature-loop-center {
+    margin: 0 -24px;
+    align-self: center;
+  }
+
+  .feature-loop-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .feature-loop-circle-text {
+    font-size: 11px;
+  }
+
+  .feature-loop-title {
+    font-size: 24px;
+  }
+
+  .feature-loop-desc {
+    font-size: 16px;
+  }
+
+  .feature-closing {
+    font-size: 24px;
   }
 
   .cta-button-body {

@@ -143,33 +143,34 @@
     <!-- Problem Section -->
     <section class="problem" id="problem">
       <div class="container">
-        <div class="problem-layout">
-          <div class="problem-left">
-            <div class="problem-heading scroll-reveal">
-              <p class="section-label">the problem</p>
-              <h2 class="problem-title">あなたの価値は、<br>GitHubだけでは<br>測れません。</h2>
+        <div class="problem-header scroll-reveal">
+          <p class="section-label-center">the problem</p>
+          <h2 class="section-title-center">エンジニアとして成長してるはずなのに、<br>次の一歩が見えない。</h2>
+        </div>
+        <div class="problem-cards">
+          <div class="problem-card scroll-reveal">
+            <div class="problem-card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 5a2 2 0 110 4 2 2 0 010-4zm3 17h-6v-2h2v-6h-2v-2h4v8h2v2z" fill="#3d3d5c"/></svg>
             </div>
-            <div class="problem-statement scroll-reveal">
-              <p>「草」が生えてないと評価されない。</p>
-              <p>登壇経験がないと市場価値が低い。</p>
-              <p>そんな「公開情報偏重」の採用市場に</p>
-              <p>私たちは違和感を持っています。</p>
-            </div>
+            <h3 class="problem-card-title">自分の市場価値がわからない</h3>
+            <p class="problem-card-desc">社内では評価されていても、転職市場での自分の立ち位置が見えない。スキルの棚卸しを一人でやっても、客観的な判断ができない。</p>
           </div>
-          <div class="problem-right">
-            <div class="problem-box scroll-reveal">
-              <p>本当に難易度の高い仕事は、往々にして社外に出せない。</p>
-              <p>目の前の業務に全力な人ほど、アウトプットする暇がない。</p>
-              <p class="problem-box-bold">結果、優秀なのに「見つからない。」人がいる。</p>
+          <div class="problem-card scroll-reveal">
+            <div class="problem-card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm1 21h-2v-2h2v2zm2.07-7.75l-.9.92C17.45 16.9 17 17.5 17 19h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z" fill="#3d3d5c"/></svg>
             </div>
-            <div class="problem-box scroll-reveal">
-              <p>AI時代だからこそ、必要なのは「人との対話」です。</p>
-              <br>
-              <p>経験豊富なメンターが、あなたの泥臭い頑張りや隠れた実力を掘り起こし、</p>
-              <p>「言語化」することで、あなたの本当の市場価値に気づくことができます。</p>
+            <h3 class="problem-card-title">外の世界が見えない</h3>
+            <p class="problem-card-desc">日々の業務に集中するほど、業界の動きや他社の技術スタックから離れていく。情報はあるのに、リアルな話が聞けない。</p>
+          </div>
+          <div class="problem-card scroll-reveal">
+            <div class="problem-card-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm-2 19.5l-5-5 1.41-1.41L14 18.67l7.59-7.59L23 12.5l-9 9z" fill="#3d3d5c"/></svg>
             </div>
+            <h3 class="problem-card-title">キャリアの方向性が定まらない</h3>
+            <p class="problem-card-desc">技術は好きだけど、スペシャリスト？マネジメント？副業？独立？選択肢が多すぎて、一人では決められない。</p>
           </div>
         </div>
+        <p class="problem-closing scroll-reveal">一人で考え続けても、答えは出ません。</p>
       </div>
     </section>
 
@@ -177,17 +178,48 @@
     <section class="feature" id="feature">
       <div class="container">
         <div class="feature-heading scroll-reveal">
+          <p class="section-label-center">how it works</p>
           <h2 class="section-title-center">転職活動が<br>あなたの成長機会に変わる</h2>
           <p class="feature-desc">
-            TechTrainダイレクトでは、企業と接点(オファー・面談)を持つところが、<br class="pc-only">
-            次のメンタリング(学習)へのチケットになります。
+            TechTrainでは、企業との接点がメンタリングのチケットに。<br class="pc-only">
+            使うほどキャリアが前に進む、新しい仕組みです。
           </p>
         </div>
-        <div class="feature-diagram scroll-reveal">
-          <div class="feature-diagram-placeholder">
-            <!-- サービスフロー図のプレースホルダー -->
+        <div class="feature-loop scroll-reveal">
+          <div class="feature-loop-card feature-loop-card--left">
+            <span class="feature-loop-step">STEP 1</span>
+            <div class="feature-loop-icon feature-loop-icon--blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 6H16V4C16 2.89 15.11 2 14 2H10C8.89 2 8 2.89 8 4V6H4C2.89 6 2 6.89 2 8V19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM10 4H14V6H10V4Z" fill="#3d3d5c"/></svg>
+            </div>
+            <h3 class="feature-loop-title">仕事の機会</h3>
+            <p class="feature-loop-desc">メンター評価に基づいた「本質的なスカウト」が届く。企業と面談を完了させると…？</p>
+            <span class="feature-loop-tag feature-loop-tag--blue">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 10L5 4L8 7L11 2" stroke="#3d3d5c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              活動実績が評価される
+            </span>
+          </div>
+          <div class="feature-loop-center">
+            <div class="feature-loop-circle">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M24 16L20 12V15H12V17H20V20L24 16Z" fill="#FACC15"/><path d="M8 16L12 20V17H20V15H12V12L8 16Z" fill="#FACC15"/></svg>
+              <span class="feature-loop-circle-text">POSITIVE<br>LOOP</span>
+            </div>
+          </div>
+          <div class="feature-loop-card feature-loop-card--right">
+            <div class="feature-loop-icon feature-loop-icon--yellow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 10V6C22 4.89 21.11 4 20 4H4C2.89 4 2 4.89 2 6V10C3.11 10 4 10.89 4 12C4 13.11 3.11 14 2 14V18C2 19.11 2.89 20 4 20H20C21.11 20 22 19.11 22 18V14C20.89 14 20 13.11 20 12C20 10.89 20.89 10 22 10ZM13 17.5H11V15.5H13V17.5ZM13 13H11V11H13V13ZM13 8.5H11V6.5H13V8.5Z" fill="#D4A500"/></svg>
+            </div>
+            <h3 class="feature-loop-title">チケット獲得！</h3>
+            <p class="feature-loop-desc">キャリアを伸ばすためのチケットとして、<span class="feature-loop-underline">1on1チケット</span>をGET。</p>
+            <span class="feature-loop-tag feature-loop-tag--yellow">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2L8.5 5L12 5.5L9.5 8L10 11.5L7 10L4 11.5L4.5 8L2 5.5L5.5 5L7 2Z" stroke="#D4A500" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              視座とスキルが上がる
+            </span>
           </div>
         </div>
+        <p class="feature-closing scroll-reveal">
+          「消費されるだけの転職」から、<br>
+          <span class="feature-closing-highlight">「資産になる転職」</span>へ。
+        </p>
         <div class="feature-cta scroll-reveal">
           <a href="https://techtrain.dev/signup" class="cta-button-primary">
             <div class="cta-bubble">
