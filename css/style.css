@@ -968,25 +968,109 @@ input, select, textarea {
   margin-bottom: 24px;
 }
 
-.mentors-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  justify-items: center;
+/* --- Mentor Card Stack --- */
+.mentor-slider {
+  position: relative;
+  padding-top: 40px;
+}
+
+.mentor-slider-track {
+  position: relative;
+  width: min(640px, calc(100% - 48px));
+  aspect-ratio: 640 / 380;
+  margin: 0 auto;
 }
 
 .mentor-card {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: white;
   border-radius: var(--radius-card);
-  padding: 40px;
-  width: 100%;
-  max-width: 400px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  min-height: 400px;
+  gap: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              z-index 0s;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Active card - front and center */
+.mentor-card[data-pos="0"] {
+  opacity: 1;
+  z-index: 5;
+  transform: translateX(0) scale(1) rotate(0deg);
+  pointer-events: auto;
+}
+
+/* 1 card behind - slightly left and rotated */
+.mentor-card[data-pos="1"] {
+  opacity: 0.7;
+  z-index: 4;
+  transform: translateX(-8%) scale(0.92) rotate(-3deg);
+}
+
+/* 2 cards behind - more left and rotated */
+.mentor-card[data-pos="2"] {
+  opacity: 0.4;
+  z-index: 3;
+  transform: translateX(-14%) scale(0.85) rotate(-6deg);
+}
+
+/* 1 card ahead - slightly right and rotated */
+.mentor-card[data-pos="-1"] {
+  opacity: 0.7;
+  z-index: 4;
+  transform: translateX(8%) scale(0.92) rotate(3deg);
+}
+
+/* 2 cards ahead - more right and rotated */
+.mentor-card[data-pos="-2"] {
+  opacity: 0.4;
+  z-index: 3;
+  transform: translateX(14%) scale(0.85) rotate(6deg);
+}
+
+/* Slide out animation */
+.mentor-card.stack-slide-out {
+  animation: stackSlideOut 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  z-index: 6;
+}
+
+@keyframes stackSlideOut {
+  0% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-30%) scale(0.85) rotate(-8deg);
+    opacity: 0;
+  }
+}
+
+/* Slide in animation */
+.mentor-card.stack-slide-in {
+  animation: stackSlideIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+@keyframes stackSlideIn {
+  0% {
+    transform: translateX(30%) scale(0.85) rotate(8deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .mentor-card-deco {
@@ -997,17 +1081,15 @@ input, select, textarea {
   height: 22px;
 }
 
-.mentor-card-name {
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--color-text-body);
-  text-align: center;
-  width: 100%;
+.mentor-card-header {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .mentor-card-photo {
-  width: 114px;
-  height: 114px;
+  width: 80px;
+  height: 80px;
   border-radius: 999px;
   overflow: hidden;
   flex-shrink: 0;
@@ -1020,16 +1102,63 @@ input, select, textarea {
   object-fit: cover;
 }
 
+.mentor-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.mentor-card-name {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-text-body);
+}
+
+.mentor-card-company {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-text-desc);
+  margin-top: 4px;
+}
+
 .mentor-card-bio {
   font-weight: 500;
   font-size: 14px;
   color: var(--color-text-body);
   text-align: justify;
-  line-height: normal;
+  line-height: 1.75;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+}
+
+/* Stack Navigation */
+.mentor-slider-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.mentor-slider-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--color-text-body);
+  background: white;
+  color: var(--color-text-body);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mentor-slider-btn:hover {
+  background: var(--color-text-body);
+  color: white;
 }
 
 @media (min-width: 769px) {
@@ -1051,21 +1180,35 @@ input, select, textarea {
 
   .mentors-subtitle {
     font-size: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 
-  .mentors-grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: var(--container-max);
-    margin: 0 auto;
+  .mentor-slider-track {
+    width: 640px;
+    height: 380px;
+    aspect-ratio: auto;
   }
 
   .mentor-card {
-    height: 453px;
+    padding: 40px;
+  }
+
+  .mentor-card-photo {
+    width: 104px;
+    height: 104px;
   }
 
   .mentor-card-name {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .mentor-card-company {
+    font-size: 14px;
+  }
+
+  .mentor-card-bio {
+    font-size: 16px;
+    -webkit-line-clamp: 6;
   }
 }
 

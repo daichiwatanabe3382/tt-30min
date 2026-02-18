@@ -100,6 +100,112 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(goToNextCard, 3500);
   }
 
+  // --- Mentor Card Stack Shuffle ---
+  var mentorSlider = document.getElementById('mentorSlider');
+  if (mentorSlider) {
+    var mCards = mentorSlider.querySelectorAll('.mentor-card');
+    var prevBtn = document.getElementById('mentorPrev');
+    var nextBtn = document.getElementById('mentorNext');
+    var mCurrentIndex = 0;
+    var mAnimating = false;
+
+    function updateStack() {
+      mCards.forEach(function (card, i) {
+        card.classList.remove('stack-slide-out', 'stack-slide-in');
+        var pos = i - mCurrentIndex;
+        // Only show cards within range of -2 to 2
+        if (pos >= -2 && pos <= 2) {
+          card.setAttribute('data-pos', pos);
+        } else {
+          card.removeAttribute('data-pos');
+        }
+      });
+    }
+
+    function goToMentor(newIndex, direction) {
+      if (mAnimating || newIndex === mCurrentIndex) return;
+      mAnimating = true;
+
+      var oldCard = mCards[mCurrentIndex];
+      var newCard = mCards[newIndex];
+
+      // Remove all positions first
+      mCards.forEach(function (c) {
+        c.classList.remove('stack-slide-out', 'stack-slide-in');
+      });
+
+      // Animate old card out
+      oldCard.removeAttribute('data-pos');
+      oldCard.classList.add('stack-slide-out');
+
+      // Update index and position surrounding cards
+      mCurrentIndex = newIndex;
+
+      // Position surrounding cards immediately
+      mCards.forEach(function (card, i) {
+        if (i === newIndex) return; // new active handled separately
+        var oldPos = card.getAttribute('data-pos');
+        card.classList.remove('stack-slide-out', 'stack-slide-in');
+        var pos = i - mCurrentIndex;
+        if (pos >= -2 && pos <= 2) {
+          card.setAttribute('data-pos', pos);
+        } else {
+          card.removeAttribute('data-pos');
+        }
+      });
+
+      // Animate new card in
+      newCard.removeAttribute('data-pos');
+      newCard.classList.add('stack-slide-in');
+
+      setTimeout(function () {
+        newCard.classList.remove('stack-slide-in');
+        oldCard.classList.remove('stack-slide-out');
+        newCard.setAttribute('data-pos', '0');
+        mAnimating = false;
+      }, 600);
+    }
+
+    prevBtn.addEventListener('click', function () {
+      var prev = (mCurrentIndex - 1 + mCards.length) % mCards.length;
+      goToMentor(prev, 'prev');
+    });
+
+    nextBtn.addEventListener('click', function () {
+      var next = (mCurrentIndex + 1) % mCards.length;
+      goToMentor(next, 'next');
+    });
+
+    // Touch/swipe support
+    var mTouchStartX = 0;
+    mentorSlider.addEventListener('touchstart', function (e) {
+      mTouchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    mentorSlider.addEventListener('touchend', function (e) {
+      var diff = mTouchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goToMentor((mCurrentIndex + 1) % mCards.length, 'next');
+        else goToMentor((mCurrentIndex - 1 + mCards.length) % mCards.length, 'prev');
+      }
+    }, { passive: true });
+
+    // Auto shuffle every 4 seconds
+    var mentorAutoplay = setInterval(function () {
+      var next = (mCurrentIndex + 1) % mCards.length;
+      goToMentor(next, 'next');
+    }, 4000);
+
+    // Pause autoplay on interaction
+    [prevBtn, nextBtn].forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        clearInterval(mentorAutoplay);
+      });
+    });
+
+    // Initialize
+    updateStack();
+  }
+
   // --- Scroll Reveal (Intersection Observer) ---
   if ('IntersectionObserver' in window) {
     var revealElements = document.querySelectorAll('.scroll-reveal');
