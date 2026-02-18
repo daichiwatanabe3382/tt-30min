@@ -3,245 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechTrain Direct | 人物理解から始まる、内定まで"完全伴走支援型"の新しい新卒エンジニア採用</title>
-  <meta name="description" content="スキル × 経歴 × 人物評価。3軸で立体的に候補者を事前に確認できるダイレクトスカウト。返信率30%超、週1時間で運用可能。">
-  <link rel="stylesheet" href="style.css">
+  <title>TechTrain | 人生を変える30分</title>
+  <meta name="description" content="経験豊富なエンジニアメンターとの30分の対話が、あなたのキャリアの分岐点になる。TechTrainで技術もキャリアも仕事も相談できる。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <div class="header-left">
-          <a href="#" class="logo">
-            <img src="images/logo.svg" alt="TechTrain Direct" class="logo-img">
-          </a>
-          <span class="header-tagline">"完全伴走型" 新卒エンジニア採用サービス</span>
-        </div>
-        <nav class="nav">
-          <a href="#contact" class="btn btn-outline btn-sm">お問い合わせ</a>
-          <a href="#contact" class="btn btn-primary btn-sm">資料ダウンロード</a>
-        </nav>
-        <button class="mobile-menu-btn" aria-label="メニュー">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">
+        <img src="images/logo-techtrain.svg" alt="TechTrain" class="header-logo-img">
+      </a>
+      <nav class="header-nav">
+        <a href="#stories" class="header-nav-link">キャリアの仕組み</a>
+        <a href="#feature" class="header-nav-link">新しい仕組み</a>
+        <a href="#mentors" class="header-nav-link">メンター</a>
+        <a href="https://techtrain.dev/login" class="header-nav-link">ログイン</a>
+      </nav>
+      <a href="https://techtrain.dev/signup" class="header-cta">
+        <span class="header-cta-mascot"></span>
+        <svg class="header-cta-github" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 0.198C3.582 0.198 0 3.78 0 8.198c0 3.535 2.292 6.533 5.471 7.592.4.074.547-.174.547-.386 0-.19-.007-.693-.011-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.889-1.17-.889-1.17-.726-.496.055-.486.055-.486.803.056 1.226.824 1.226.824.713 1.222 1.872.869 2.328.664.073-.517.279-.869.508-1.069-1.777-.202-3.645-.888-3.645-3.953 0-.874.312-1.588.823-2.147-.082-.203-.357-1.016.079-2.117 0 0 .672-.215 2.2.82A7.672 7.672 0 018 4.066c.68.003 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.101.162 1.914.08 2.117.512.559.822 1.273.822 2.147 0 3.073-1.87 3.749-3.653 3.947.287.248.543.735.543 1.481 0 1.07-.01 1.932-.01 2.195 0 .214.144.463.55.385C13.71 14.727 16 11.731 16 8.198 16 3.78 12.418 0.198 8 0.198z" fill="white"/></svg>
+        <span class="header-cta-text">GitHubで登録</span>
+        <span class="header-cta-badge">チケット1回プレゼント</span>
+        <svg class="header-cta-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 3.5L11 8L6.5 12.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="mobile-menu-btn" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobileMenu">
     <nav class="mobile-nav">
-      <a href="#features" class="mobile-nav-link">特徴</a>
-      <a href="#plans" class="mobile-nav-link">プラン</a>
-      <a href="#cases" class="mobile-nav-link">導入事例</a>
-      <a href="#contact" class="btn btn-primary btn-block">資料ダウンロード</a>
+      <a href="#stories" class="mobile-nav-link">キャリアの仕組み</a>
+      <a href="#feature" class="mobile-nav-link">新しい仕組み</a>
+      <a href="#mentors" class="mobile-nav-link">メンター</a>
+      <a href="https://techtrain.dev/login" class="mobile-nav-link">ログイン</a>
+      <a href="https://techtrain.dev/signup" class="mobile-cta-btn">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M8 0.198C3.582 0.198 0 3.78 0 8.198c0 3.535 2.292 6.533 5.471 7.592.4.074.547-.174.547-.386 0-.19-.007-.693-.011-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.889-1.17-.889-1.17-.726-.496.055-.486.055-.486.803.056 1.226.824 1.226.824.713 1.222 1.872.869 2.328.664.073-.517.279-.869.508-1.069-1.777-.202-3.645-.888-3.645-3.953 0-.874.312-1.588.823-2.147-.082-.203-.357-1.016.079-2.117 0 0 .672-.215 2.2.82A7.672 7.672 0 018 4.066c.68.003 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.101.162 1.914.08 2.117.512.559.822 1.273.822 2.147 0 3.073-1.87 3.749-3.653 3.947.287.248.543.735.543 1.481 0 1.07-.01 1.932-.01 2.195 0 .214.144.463.55.385C13.71 14.727 16 11.731 16 8.198 16 3.78 12.418 0.198 8 0.198z" fill="white"/></svg>
+        GitHubで登録して始める
+      </a>
     </nav>
   </div>
 
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
+      <div class="hero-inner">
         <div class="hero-content">
-          <div class="hero-main">
-            <div class="hero-text">
-              <div class="hero-badge">スタートアップ・中小企業向け</div>
-              <h1 class="hero-title">
-                <span class="title-line">人物理解から始まる、</span>
-                <span class="title-line">内定まで<span class="title-highlight">"完全伴走支援型"</span>の</span>
-                <span class="title-line">新しい新卒エンジニア採用</span>
-              </h1>
-              <div class="hero-features">
-                <div class="feature-row">
-                  <span class="feature-tag">ピック・スカウト代行</span>
-                  <span class="feature-x">×</span>
-                  <span class="feature-tag">圧倒的ユーザー理解</span>
-                </div>
-                <p class="feature-desc">→あなたの右腕となる伴走者が候補者をグリップ</p>
-              </div>
-              <div class="hero-features">
-                <div class="feature-row">
-                  <span class="feature-tag">スキル</span>
-                  <span class="feature-x">×</span>
-                  <span class="feature-tag">経歴</span>
-                  <span class="feature-x">×</span>
-                  <span class="feature-tag">メンター評価</span>
-                </div>
-                <p class="feature-desc">→3軸の立体的な候補者情報でカルチャーマッチ</p>
-              </div>
-              <p class="hero-catchphrase">
-                だから <span class="catchphrase-highlight">この人と働きたい</span> が見つかる
-              </p>
-            </div>
-            <div class="hero-image-area">
-
-              <div class="hero-image-deco hero-image-deco-1"></div>
-              <div class="hero-image-deco hero-image-deco-2"></div>
-              <div class="hero-image-frame">
-                <img src="images/hero-person.jpg" alt="候補者イメージ" class="hero-person-img">
-              </div>
-            </div>
+          <span class="hero-badge">副業・転職に直結するエンジニアキャリアを形成</span>
+          <div class="hero-copy">
+            <p class="hero-copy-sub">キャリアを変えるのは自分。<br>きっかけをくれたのは、人との出会い。</p>
+            <h1 class="hero-copy-main">
+              <span class="hero-copy-main-line1">人生<span class="hero-copy-particle">を</span>変<span class="hero-copy-particle">える</span></span>
+              <span class="hero-copy-main-line2"><span class="hero-copy-number">30</span>分</span>
+            </h1>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-deco stat-deco-left"></span>
-              <span class="stat-deco stat-deco-right"></span>
-              <span class="stat-number">30<span class="stat-unit">%超</span></span>
-              <span class="stat-label">返信率</span>
-              <span class="stat-desc">業界平均の3〜6倍</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-deco stat-deco-left"></span>
-              <span class="stat-deco stat-deco-right"></span>
-              <span class="stat-number"><span class="stat-unit">週</span>1<span class="stat-unit">時間</span></span>
-              <span class="stat-label">の運用</span>
-              <span class="stat-desc">スカウト代行で業務削減</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-deco stat-deco-left"></span>
-              <span class="stat-deco stat-deco-right"></span>
-              <span class="stat-number">5<span class="stat-unit">万円〜</span></span>
-              <span class="stat-label">代行月額</span>
-              <span class="stat-desc">定額で代行は業界唯一</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-deco stat-deco-left"></span>
-              <span class="stat-deco stat-deco-right"></span>
-              <span class="stat-number">13,000<span class="stat-unit">名</span></span>
-              <span class="stat-label">候補者数</span>
-              <span class="stat-desc">業界エンジニア評価済みの母集団</span>
-            </div>
+          <p class="hero-sub-label">
+            「仕事探し」だけでは得られない、<br>
+            「キャリアの転期」を作る<br>
+            エンジニアのためのプラットフォーム
+          </p>
+        </div>
+        <div class="hero-cards">
+          <div class="hero-card active">
+            <img src="images/interview-1.png" alt="" class="hero-card-img">
           </div>
-          <div class="hero-cta">
-            <img src="images/TypeA-rikus_smil.png" alt="" class="hero-cta-chara hero-cta-chara-left">
-            <div class="hero-cta-buttons">
-              <div class="hero-cta-item">
-                <p class="hero-cta-label">＼ さらに詳しい情報は ／</p>
-                <a href="#contact" class="hero-btn hero-btn-dark">
-                  <span>資料ダウンロード</span>
-                  <span class="hero-btn-arrow">&#x203A;</span>
-                </a>
-              </div>
-              <div class="hero-cta-item">
-                <p class="hero-cta-label">＼ 直接お話を聞きたい場合は ／</p>
-                <a href="#contact" class="hero-btn hero-btn-gold">
-                  <span>お問い合わせ</span>
-                  <span class="hero-btn-arrow">&#x203A;</span>
-                </a>
-              </div>
-            </div>
-            <img src="images/TypeA-smile.png" alt="" class="hero-cta-chara hero-cta-chara-right">
+          <div class="hero-card">
+            <img src="images/interview-2.png" alt="" class="hero-card-img">
+          </div>
+          <div class="hero-card">
+            <img src="images/interview-3.png" alt="" class="hero-card-img">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Clients Marquee Section -->
-    <section class="clients">
-      <div class="marquee marquee-right">
-        <div class="marquee-track">
-          <div class="marquee-logos">
-            <img src="images/logo00001.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00002.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00003.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00004.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00005.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00006.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00007.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00008.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00009.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00010.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00011.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00012.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00013.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00014.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00015.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00016.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00017.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00018.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00019.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00020.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00021.png" alt="導入企業" class="client-logo">
+    <!-- Success Stories Section -->
+    <section class="stories" id="stories">
+      <div class="container">
+        <div class="stories-header">
+          <div class="stories-header-left">
+            <p class="section-label">success stories</p>
+            <h2 class="section-title">メンターとの出会いが<br>転機になった人たち</h2>
           </div>
-          <div class="marquee-logos" aria-hidden="true">
-            <img src="images/logo00001.png" alt="" class="client-logo">
-            <img src="images/logo00002.png" alt="" class="client-logo">
-            <img src="images/logo00003.png" alt="" class="client-logo">
-            <img src="images/logo00004.png" alt="" class="client-logo">
-            <img src="images/logo00005.png" alt="" class="client-logo">
-            <img src="images/logo00006.png" alt="" class="client-logo">
-            <img src="images/logo00007.png" alt="" class="client-logo">
-            <img src="images/logo00008.png" alt="" class="client-logo">
-            <img src="images/logo00009.png" alt="" class="client-logo">
-            <img src="images/logo00010.png" alt="" class="client-logo">
-            <img src="images/logo00011.png" alt="" class="client-logo">
-            <img src="images/logo00012.png" alt="" class="client-logo">
-            <img src="images/logo00013.png" alt="" class="client-logo">
-            <img src="images/logo00014.png" alt="" class="client-logo">
-            <img src="images/logo00015.png" alt="" class="client-logo">
-            <img src="images/logo00016.png" alt="" class="client-logo">
-            <img src="images/logo00017.png" alt="" class="client-logo">
-            <img src="images/logo00018.png" alt="" class="client-logo">
-            <img src="images/logo00019.png" alt="" class="client-logo">
-            <img src="images/logo00020.png" alt="" class="client-logo">
-            <img src="images/logo00021.png" alt="" class="client-logo">
-          </div>
+          <p class="stories-header-desc">
+            たった一度のカジュアル面談をきっかけに<br>
+            キャリアを大きく変えた実話
+          </p>
         </div>
-      </div>
-      <div class="marquee marquee-left">
-        <div class="marquee-track">
-          <div class="marquee-logos">
-            <img src="images/logo00022.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00023.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00024.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00025.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00026.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00027.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00028.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00029.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00030.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00031.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00032.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00033.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00034.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00035.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00036.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00037.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00038.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00039.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00040.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00041.png" alt="導入企業" class="client-logo">
-            <img src="images/logo00042.png" alt="導入企業" class="client-logo">
-          </div>
-          <div class="marquee-logos" aria-hidden="true">
-            <img src="images/logo00022.png" alt="" class="client-logo">
-            <img src="images/logo00023.png" alt="" class="client-logo">
-            <img src="images/logo00024.png" alt="" class="client-logo">
-            <img src="images/logo00025.png" alt="" class="client-logo">
-            <img src="images/logo00026.png" alt="" class="client-logo">
-            <img src="images/logo00027.png" alt="" class="client-logo">
-            <img src="images/logo00028.png" alt="" class="client-logo">
-            <img src="images/logo00029.png" alt="" class="client-logo">
-            <img src="images/logo00030.png" alt="" class="client-logo">
-            <img src="images/logo00031.png" alt="" class="client-logo">
-            <img src="images/logo00032.png" alt="" class="client-logo">
-            <img src="images/logo00033.png" alt="" class="client-logo">
-            <img src="images/logo00034.png" alt="" class="client-logo">
-            <img src="images/logo00035.png" alt="" class="client-logo">
-            <img src="images/logo00036.png" alt="" class="client-logo">
-            <img src="images/logo00037.png" alt="" class="client-logo">
-            <img src="images/logo00038.png" alt="" class="client-logo">
-            <img src="images/logo00039.png" alt="" class="client-logo">
-            <img src="images/logo00040.png" alt="" class="client-logo">
-            <img src="images/logo00041.png" alt="" class="client-logo">
-            <img src="images/logo00042.png" alt="" class="client-logo">
-          </div>
+        <div class="stories-grid">
+          <article class="interview-card scroll-reveal">
+            <div class="interview-card-img">
+              <img src="images/interview-1.png" alt="インタビュー記事" loading="lazy">
+            </div>
+            <h3 class="interview-card-title">スキル不足で悩んでいた私が、世界を飛び回るエンジニアになれた。きっかけは、たった30分の面談だった。</h3>
+            <div class="interview-card-tags">
+              <span class="interview-tag">キャリアアップ</span>
+              <span class="interview-tag">転職</span>
+              <span class="interview-tag">登壇</span>
+              <span class="interview-tag">海外進出</span>
+            </div>
+          </article>
+          <article class="interview-card scroll-reveal">
+            <div class="interview-card-img">
+              <img src="images/interview-2.png" alt="インタビュー記事" loading="lazy">
+            </div>
+            <h3 class="interview-card-title">20社落ちて「もう終わりだ」と思っていた僕が、SmartHRのQAエンジニアになるまで。</h3>
+            <div class="interview-card-tags">
+              <span class="interview-tag">営業</span>
+              <span class="interview-tag">キャリアチェンジ</span>
+              <span class="interview-tag">年収アップ</span>
+              <span class="interview-tag">理想実現</span>
+            </div>
+          </article>
+          <article class="interview-card scroll-reveal">
+            <div class="interview-card-img">
+              <img src="images/interview-3.png" alt="インタビュー記事" loading="lazy">
+            </div>
+            <h3 class="interview-card-title">独学で50万円以上使っても「エンジニアです」と言えなかった僕が、副業エンジニアとして内定をもらうまで。</h3>
+            <div class="interview-card-tags">
+              <span class="interview-tag">副業</span>
+              <span class="interview-tag">未経験</span>
+              <span class="interview-tag">個人開発</span>
+              <span class="interview-tag">フルスタック</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -249,387 +143,152 @@
     <!-- Problem Section -->
     <section class="problem" id="problem">
       <div class="container">
-        <h2 class="section-title">
-          「スキルは良さそう」、でも会ってみたら違った——<br class="pc-only">
-          <span class="highlight">そんな経験ありませんか？</span>
-        </h2>
-        <div class="problem-grid">
-          <div class="problem-card">
-            <img src="images/problem-deco.png" alt="" class="problem-card-deco">
-            <h3 class="problem-title">プロフィールだけでは<br>人柄がわからない</h3>
-            <p class="problem-desc">GitHubやポートフォリオは見た。<br>でも一緒に働きたいかは別の話</p>
-          </div>
-          <div class="problem-card">
-            <img src="images/problem-deco.png" alt="" class="problem-card-deco">
-            <h3 class="problem-title">会ってから<br>「合わない」がわかる</h3>
-            <p class="problem-desc">5分で違うと感じても、<br>1時間の面談は続く</p>
-          </div>
-          <div class="problem-card">
-            <img src="images/problem-deco.png" alt="" class="problem-card-deco">
-            <h3 class="problem-title">カルチャーマッチを重視<br>だけど判断材料がない</h3>
-            <p class="problem-desc">スキルは絞れる。<br>でもマインドは会わないとわからない</p>
-          </div>
-          <div class="problem-card">
-            <img src="images/problem-deco.png" alt="" class="problem-card-deco">
-            <h3 class="problem-title">スカウト運用に<br>手が回らない</h3>
-            <p class="problem-desc">候補者ピック、文面作成、送信、<br>返信対応…工数が膨大</p>
-          </div>
-          <div class="problem-card">
-            <img src="images/problem-deco.png" alt="" class="problem-card-deco">
-            <h3 class="problem-title">他業務が忙しく<br>採用に集中できない</h3>
-            <p class="problem-desc">面接調整、説明会準備、内定者フォロー<br>スカウトは後回しになりがち</p>
-          </div>
-          <div class="problem-card">
-            <img src="images/problem-deco.png" alt="" class="problem-card-deco">
-            <h3 class="problem-title">現場エンジニアを<br>巻き込む余裕がない</h3>
-            <p class="problem-desc">協力を頼みたいが、<br>本業で手一杯と言われる</p>
-          </div>
-        </div>
-        <div class="problem-mascots">
-          <img src="images/Group 607.png" alt="" class="mascot-img">
-        </div>
-      </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="solution" id="solution">
-      <div class="solution-ellipse solution-ellipse-tl"></div>
-      <div class="solution-ellipse solution-ellipse-br"></div>
-      <div class="container">
-        <div class="solution-header">
-          <img src="images/solution-badge.png" alt="SOLUTION" class="solution-badge">
-          <h2 class="solution-title">
-            TechTrain Directは <span class="solution-highlight">「一緒に働きたいひと」</span> を採用するための<br>
-            エンジニア採用サービスです
-          </h2>
-        </div>
-        <div class="solution-content">
-          <div class="solution-message">
-            <p class="solution-label">## Message</p>
-            <div class="solution-quote-block">
-              <img src="images/quote-mark.svg" alt="" class="solution-quote-mark">
-              <h3 class="solution-quote">能力の高い人ではなく、<br>一緒に働きたいひとを採用する。</h3>
+        <div class="problem-layout">
+          <div class="problem-left">
+            <div class="problem-heading scroll-reveal">
+              <p class="section-label">the problem</p>
+              <h2 class="problem-title">あなたの価値は、<br>GitHubだけでは<br>測れません。</h2>
             </div>
-            <div class="solution-desc">
-              <p>このTechTrainの原点は、<strong>CyberAgent 藤田晋会長</strong> からの教えです。</p>
-              <p>能力の高さももちろん大切ですが、それよりも大切なことは<br>"一緒に働きたい"と思える人材かどうかにあります。</p>
-              <p>この理想的な採用を、エンジニア採用に悩むすべての組織に提供する。<br>これを実現するために TechTrain を立ち上げました。</p>
+            <div class="problem-statement scroll-reveal">
+              <p>「草」が生えてないと評価されない。</p>
+              <p>登壇経験がないと市場価値が低い。</p>
+              <p>そんな「公開情報偏重」の採用市場に</p>
+              <p>私たちは違和感を持っています。</p>
             </div>
           </div>
-          <div class="solution-profile">
-            <img src="images/ozawa-combined.png" alt="小澤 政生" class="solution-photo-img">
-            <div class="solution-profile-info">
-              <div class="solution-profile-name-block">
-                <p class="solution-position">代表取締役CEO</p>
-                <p class="solution-name">小澤 政生</p>
-              </div>
-              <p class="solution-bio">2010年京都大学経済学部経営学科卒業。<br>株式会社サイバーエージェントにて採用責任者を担当。<br>7年間で約15,000人の学生と面談。</p>
+          <div class="problem-right">
+            <div class="problem-box scroll-reveal">
+              <p>本当に難易度の高い仕事は、往々にして社外に出せない。</p>
+              <p>目の前の業務に全力な人ほど、アウトプットする暇がない。</p>
+              <p class="problem-box-bold">結果、優秀なのに「見つからない。」人がいる。</p>
+            </div>
+            <div class="problem-box scroll-reveal">
+              <p>AI時代だからこそ、必要なのは「人との対話」です。</p>
+              <br>
+              <p>経験豊富なメンターが、あなたの泥臭い頑張りや隠れた実力を掘り起こし、</p>
+              <p>「言語化」することで、あなたの本当の市場価値に気づくことができます。</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How Section -->
-    <section class="how" id="how">
+    <!-- Feature Section -->
+    <section class="feature" id="feature">
       <div class="container">
-        <h2 class="section-title">
-          だから、TechTrainは<br class="sp-only">
-          <span class="highlight">「立体的に」</span>候補者が見える<br class="sp-only">仕組みをつくりました
-        </h2>
-        <div class="how-visual">
-          <div class="how-comparison">
-            <div class="how-card how-before">
-              <h3 class="how-card-title">従来のスカウト</h3>
-              <div class="how-diagram flat">
-                <div class="axis-item">スキル</div>
-                <div class="axis-item">経歴</div>
-              </div>
-              <p class="how-label">→ 平面的</p>
-            </div>
-            <div class="how-arrow">
-              <span>▶</span>
-            </div>
-            <div class="how-card how-after">
-              <h3 class="how-card-title">TechTrain</h3>
-              <div class="how-diagram solid">
-                <div class="axis-item">スキル</div>
-                <div class="axis-item">経歴</div>
-                <div class="axis-item highlight">人物評価</div>
-              </div>
-              <p class="how-label accent">→ 立体的</p>
-              <p class="how-note">（メンターの推薦コメント）</p>
-            </div>
+        <div class="feature-heading scroll-reveal">
+          <h2 class="section-title-center">転職活動が<br>あなたの成長機会に変わる</h2>
+          <p class="feature-desc">
+            TechTrainダイレクトでは、企業と接点(オファー・面談)を持つところが、<br class="pc-only">
+            次のメンタリング(学習)へのチケットになります。
+          </p>
+        </div>
+        <div class="feature-diagram scroll-reveal">
+          <div class="feature-diagram-placeholder">
+            <!-- サービスフロー図のプレースホルダー -->
           </div>
         </div>
-        <p class="how-desc">
-          100名以上のメンター（30%以上がCxO経験者）が、技術力だけでなく「一緒に働きたいか」を評価。<br class="pc-only">
-          スキル・経歴・人柄の3軸で候補者を理解した上でアプローチできます。
-        </p>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="container">
-        <h2 class="section-title">
-          TechTrain Directで<span class="highlight">実現できること</span>
-        </h2>
-        <div class="features-list">
-          <div class="feature-item">
-            <div class="feature-number">01</div>
-            <div class="feature-content">
-              <h3 class="feature-title">スキル以外の「キャラクター」が見える</h3>
-              <p class="feature-desc">
-                メンターが記録した人物評価・推薦コメントを閲覧可能。「論理的思考が強い」「素直で吸収が早い」など、プロフィールだけではわからない人柄が事前に見えます。
-              </p>
+        <div class="feature-cta scroll-reveal">
+          <a href="https://techtrain.dev/signup" class="cta-button-primary">
+            <div class="cta-bubble">
+              <span>チケット1回分プレゼント中！</span>
             </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-number">02</div>
-            <div class="feature-content">
-              <h3 class="feature-title">メンターのスキル評価・推薦付きでアプローチ</h3>
-              <p class="feature-desc">
-                開発組織を作るプロ（CTO、VPoE、EM経験者）が技術力とマインドを多角的に評価済み。第三者の「お墨付き」があるから、安心してスカウトを送れます。
-              </p>
+            <div class="cta-button-body">
+              <span>まずは「人との出会い」から始める</span>
             </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-number">03</div>
-            <div class="feature-content">
-              <h3 class="feature-title">CS伴走型で、承諾まで一緒に走る</h3>
-              <p class="feature-desc">
-                求人票の打ち出し設計、スカウト文面のFB、ターゲットチューニング、返信後のフォローまで。専属CSがPDCAを回しながら、採用成功まで伴走します。
-              </p>
-            </div>
-          </div>
+            <div class="cta-button-shadow"></div>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Plans Section -->
-    <section class="plans" id="plans">
+    <!-- Mentors Section -->
+    <section class="mentors" id="mentors">
       <div class="container">
-        <h2 class="section-title">
-          採用スタイルに合わせて選べる<span class="highlight">2つのプラン</span>
-        </h2>
-        <div class="plans-grid">
-          <!-- Scout Plan -->
-          <div class="plan-card">
-            <div class="plan-badge">スカウト</div>
-            <h3 class="plan-name">DirecTrain</h3>
-            <p class="plan-tagline">週1時間で、いい人材との面談が実現</p>
-            <ul class="plan-points">
-              <li>候補者ピック・メッセージ作成を代行</li>
-              <li>貴社はスカウト確認＆送信だけでOK</li>
-              <li>返信率30%超（業界平均の3〜6倍）</li>
-            </ul>
-            <div class="plan-price">
-              <span class="price-label">定額プラン</span>
-              <span class="price-value">月<span class="price-number">25</span>万円〜</span>
-              <span class="price-note">/ 成果報酬プランあり</span>
-            </div>
-            <p class="plan-highlight">定額でスカウト代行ができるのはTechTrainだけ</p>
-            <a href="#contact" class="btn btn-primary btn-block">詳しく見る</a>
+        <div class="mentors-heading scroll-reveal">
+          <p class="section-label-center">turning point</p>
+          <h2 class="section-title-center">その30分が<br>分岐点になる</h2>
+          <div class="mentors-desc">
+            <p>自分の良さは、自分一人では見えません。</p>
+            <p>TechTrainには、160名以上の「挑戦してきた先輩(メンター)」がいます。</p>
+            <p>彼らとの対話が、あなたのキャリアの分岐点になります。</p>
           </div>
-          <!-- Headhunt Plan -->
-          <div class="plan-card featured">
-            <div class="plan-badge">ヘッドハント</div>
-            <h3 class="plan-name">ダイレクトエージェント</h3>
-            <p class="plan-tagline">会いたい人を狙い撃ち。成果報酬なし</p>
-            <div class="plan-steps">
-              <div class="step">
-                <span class="step-num">STEP 1</span>
-                <span class="step-text">面談枠を購入（5枠〜）</span>
-              </div>
-              <div class="step">
-                <span class="step-num">STEP 2</span>
-                <span class="step-text">選抜リストを作成</span>
-              </div>
-              <div class="step">
-                <span class="step-num">STEP 3</span>
-                <span class="step-text">1時間の打ち合わせ</span>
-              </div>
-              <div class="step">
-                <span class="step-num">STEP 4</span>
-                <span class="step-text">会いたい人を選ぶ</span>
-              </div>
-              <div class="step">
-                <span class="step-num">STEP 5</span>
-                <span class="step-text">面談をセット</span>
-              </div>
+        </div>
+        <p class="mentors-subtitle">＼ 優しくて優秀なエンジニアメンターが多数在籍 ／</p>
+        <div class="mentors-grid">
+          <div class="mentor-card scroll-reveal">
+            <img src="images/mentor-deco.svg" alt="" class="mentor-card-deco">
+            <h3 class="mentor-card-name">Keisuke Nishitani</h3>
+            <div class="mentor-card-photo">
+              <img src="images/mentor-placeholder.png" alt="Keisuke Nishitani" loading="lazy">
             </div>
-            <div class="plan-price">
-              <span class="price-label">面談1枠</span>
-              <span class="price-value"><span class="price-number">40</span>万円</span>
-              <span class="price-note">× 5枠〜（内定承諾の成果報酬ゼロ）</span>
+            <p class="mentor-card-bio">株式会社DELTAの取締役COO。国内SIerでクラウドサービスの開発ならびに新規事業立ち上げを経て2014年にAWS Japanへ。スペシャリストとしてグローバルチームと連携しながら活動。その後、プロトタイプ開発部門の立ち上げに従事した後、超初期ステージのスタートアップへ2人目として取締役就任。</p>
+          </div>
+          <div class="mentor-card scroll-reveal">
+            <img src="images/mentor-deco.svg" alt="" class="mentor-card-deco">
+            <h3 class="mentor-card-name">武田 憲太郎</h3>
+            <div class="mentor-card-photo">
+              <img src="images/mentor-takeda.png" alt="武田 憲太郎" loading="lazy">
             </div>
-            <a href="#contact" class="btn btn-primary btn-block">詳しく見る</a>
+            <p class="mentor-card-bio">PHP・PostgreSQL・MySQLを用いたバックエンド開発を得意とし、小規模から大規模まで幅広いシステムに携わってきました。TypeScriptやReact、AWSによるフルスタック開発経験も豊富です。LaravelスペシャリストとしてPHP本体やLaravelの機能開発・翻訳に携わり、学習環境整備にも注力。</p>
+          </div>
+          <div class="mentor-card scroll-reveal">
+            <img src="images/mentor-deco.svg" alt="" class="mentor-card-deco">
+            <h3 class="mentor-card-name">こぎそ</h3>
+            <div class="mentor-card-photo">
+              <img src="images/mentor-kogiso.png" alt="こぎそ" loading="lazy">
+            </div>
+            <p class="mentor-card-bio">受託制作や事業会社での経験を経て、2020年よりSmartHRでプロダクトデザイナーとして開発・デザインシステム設計を担当。その後生成AIベンチャーを経て、現在はスタートアップの一人目デザイナーとしてプロダクト開発に従事。</p>
+          </div>
+          <div class="mentor-card scroll-reveal">
+            <img src="images/mentor-deco.svg" alt="" class="mentor-card-deco">
+            <h3 class="mentor-card-name">岩﨑 謙汰（イワケン）</h3>
+            <div class="mentor-card-photo">
+              <img src="images/mentor-iwaken.png" alt="岩﨑 謙汰" loading="lazy">
+            </div>
+            <p class="mentor-card-bio">株式会社サイバーエージェント XR研究所 所長。Unity歴10年・XR歴8年。HoloLens、Meta Quest、Apple Vision Proなど幅広いデバイスでXR開発に携わる。学生支援コミュニティ「Iwaken Lab.」を主宰。Microsoft MVP（Mixed Reality）を3年連続受賞。</p>
+          </div>
+          <div class="mentor-card scroll-reveal">
+            <img src="images/mentor-deco.svg" alt="" class="mentor-card-deco">
+            <h3 class="mentor-card-name">橋本 圭</h3>
+            <div class="mentor-card-photo">
+              <img src="images/mentor-hashimoto.png" alt="橋本 圭" loading="lazy">
+            </div>
+            <p class="mentor-card-bio">CafeGroup CTO。ゲーム開発やUnityを中心に、インタラクティブコンテンツ制作やAI活用、サービス開発まで幅広くサポート。技術的な質問はもちろん、キャリア相談や面接対策、マネジメントや経営の相談まで、実践的な視点で一緒に成長を目指します。</p>
+          </div>
+          <div class="mentor-card scroll-reveal">
+            <img src="images/mentor-deco.svg" alt="" class="mentor-card-deco">
+            <h3 class="mentor-card-name">ちゅーやん</h3>
+            <div class="mentor-card-photo">
+              <img src="images/mentor-chuyan.png" alt="ちゅーやん" loading="lazy">
+            </div>
+            <p class="mentor-card-bio">フリーランスのFlutter開発者。Flutterを使った仕事を5年以上続け、アプリ開発の他にメンターや企業向け研修の講師、技術相談なども行っている。FlutterKaigiやFlutterconなど国内外のカンファレンスでの登壇も積極的に実施。</p>
+          </div>
+          <div class="mentor-card scroll-reveal">
+            <img src="images/mentor-deco.svg" alt="" class="mentor-card-deco">
+            <h3 class="mentor-card-name">Riku Nagano</h3>
+            <div class="mentor-card-photo">
+              <img src="images/mentor-nagano.png" alt="Riku Nagano" loading="lazy">
+            </div>
+            <p class="mentor-card-bio">大学では情報工学を専攻し、首席かつ異例の飛び級で大学院に進学。学会では優秀発表賞を受賞。卒業後はソフトバンクにてAIエンジニア、アクセンチュアにてAI活用業務を担当。その後独立し、最先端AIを活用したシステムの要件整理から開発までを一気通貫で提供。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Reasons Section -->
-    <section class="reasons" id="reasons">
+    <!-- Final CTA Section -->
+    <section class="final-cta">
       <div class="container">
-        <h2 class="section-title">
-          TechTrainが<span class="highlight">選ばれる理由</span>
-        </h2>
-        <div class="reasons-list">
-          <div class="reason-item">
-            <div class="reason-number">01</div>
-            <div class="reason-content">
-              <h3 class="reason-title">感度の高い13,000名の母集団</h3>
-              <p class="reason-desc">
-                広告ではなくメンター経由の口コミで集まった成長意欲の高いエンジニア
-              </p>
+        <div class="final-cta-inner scroll-reveal">
+          <a href="https://techtrain.dev/signup" class="cta-button-primary cta-button-primary--large">
+            <div class="cta-bubble">
+              <span>チケット1回分プレゼント中！</span>
             </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">02</div>
-            <div class="reason-content">
-              <h3 class="reason-title">開発組織を作るプロの評価</h3>
-              <p class="reason-desc">
-                Microsoft、メルカリ、サイバーエージェント等出身。30%以上がCxO経験者
-              </p>
+            <div class="cta-button-body">
+              <span>まずは「人との出会い」から始める</span>
             </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">03</div>
-            <div class="reason-content">
-              <h3 class="reason-title">唯一の「定額×代行」モデル</h3>
-              <p class="reason-desc">
-                他社は成果報酬 or 代行なし。両方できるのはTechTrainだけ
-              </p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">04</div>
-            <div class="reason-content">
-              <h3 class="reason-title">採用の「こみみ情報」をお届け</h3>
-              <p class="reason-desc">
-                候補者の志望業界、キャラクター、面談後のリアルな感想。中間の立場だから伝えられる本音をフィードバック。「なぜ御社を選ばなかったか」も正直にお伝えし、次の採用に活かせます
-              </p>
-            </div>
-          </div>
-          <div class="reason-item">
-            <div class="reason-number">05</div>
-            <div class="reason-content">
-              <h3 class="reason-title">AIスカウト、学生にはバレてます</h3>
-              <p class="reason-desc">
-                だから私たちは「納品して終わり」の外注ではなく、貴社の採用チームの一員として入り込みます。候補者理解、文面作成、細かな修正依頼、返信後のフォローまで。痒いところに手が届く伴走型で、承諾まで一緒に走り切ります
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cases Section -->
-    <section class="cases" id="cases">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="highlight">導入企業</span>の声
-        </h2>
-        <div class="case-card">
-          <div class="case-header">
-            <div class="case-logo">
-              <span class="company-name">Sansan株式会社</span>
-            </div>
-          </div>
-          <div class="case-content">
-            <div class="case-section">
-              <h4 class="case-label">課題</h4>
-              <ul class="case-list">
-                <li>優秀な学生を早期に確保したい</li>
-                <li>ナビ媒体やスカウトがマンネリ化</li>
-              </ul>
-            </div>
-            <div class="case-section">
-              <h4 class="case-label">打ち手</h4>
-              <ul class="case-list">
-                <li>ヘッドハント型採用（ダイレクトエージェント）を導入</li>
-                <li>専属CSとカルチャー・現場目線を共有し、候補者提案</li>
-              </ul>
-            </div>
-            <div class="case-section">
-              <h4 class="case-label">成果</h4>
-              <div class="case-results">
-                <div class="result-item">
-                  <span class="result-number">30<span class="result-unit">%超</span></span>
-                  <span class="result-label">面接通過率</span>
-                </div>
-              </div>
-              <ul class="case-list">
-                <li>「最終的に全員採用したいレベル」と評価</li>
-                <li>費用対効果も圧倒的に高い施策に</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="clients">
-          <p class="clients-label">導入企業</p>
-          <div class="clients-logos">
-            <span class="client-logo">DeNA</span>
-            <span class="client-logo">LayerX</span>
-            <span class="client-logo">Sansan</span>
-            <span class="client-logo">Money Forward</span>
-            <span class="client-logo">ZOZO</span>
-            <span class="client-logo">サイボウズ</span>
-            <span class="client-logo">freee</span>
-            <span class="client-logo">WealthNavi</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
-      <div class="container">
-        <h2 class="cta-title">
-          まずは資料で詳細をご確認ください
-        </h2>
-        <p class="cta-desc">
-          料金プランの詳細、導入事例、サービスの流れをまとめた資料を無料でお送りします
-        </p>
-        <div class="cta-content">
-          <div class="cta-buttons">
-            <a href="#form" class="btn btn-primary btn-xl">資料をダウンロード（無料）</a>
-            <a href="#form" class="btn btn-secondary btn-xl">無料相談を予約する</a>
-          </div>
-          <div class="cta-form" id="form">
-            <h3 class="form-title">資料請求フォーム</h3>
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <label for="company" class="form-label">会社名 <span class="required">必須</span></label>
-                <input type="text" id="company" name="company" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label for="name" class="form-label">氏名 <span class="required">必須</span></label>
-                <input type="text" id="name" name="name" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label for="email" class="form-label">メールアドレス <span class="required">必須</span></label>
-                <input type="email" id="email" name="email" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label for="phone" class="form-label">電話番号 <span class="optional">任意</span></label>
-                <input type="tel" id="phone" name="phone" class="form-input">
-              </div>
-              <div class="form-group">
-                <label for="headcount" class="form-label">採用予定人数 <span class="optional">任意</span></label>
-                <select id="headcount" name="headcount" class="form-select">
-                  <option value="">選択してください</option>
-                  <option value="1-5">1〜5名</option>
-                  <option value="6-10">6〜10名</option>
-                  <option value="11-20">11〜20名</option>
-                  <option value="21+">21名以上</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block btn-lg">資料をダウンロードする</button>
-            </form>
-          </div>
+            <div class="cta-button-shadow"></div>
+          </a>
         </div>
       </div>
     </section>
@@ -637,22 +296,83 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <span class="logo-text">TechTrain</span>
-          <span class="logo-sub">Direct</span>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="images/logo-techtrain-dark.svg" alt="TechTrain" class="footer-logo-img">
+      </div>
+      <div class="footer-nav">
+        <div class="footer-nav-col">
+          <p class="footer-nav-heading">メニュー</p>
+          <ul class="footer-nav-list">
+            <li><a href="https://techtrain.dev/signup">新規登録</a></li>
+            <li><a href="https://techtrain.dev/login">ログイン</a></li>
+            <li><a href="https://techtrain.dev/pricing">料金プラン</a></li>
+          </ul>
         </div>
-        <div class="footer-links">
-          <a href="#">会社概要</a>
-          <a href="#">プライバシーポリシー</a>
-          <a href="#">利用規約</a>
+        <div class="footer-nav-col">
+          <p class="footer-nav-heading">サービス</p>
+          <ul class="footer-nav-list">
+            <li><a href="https://techtrain.dev/roadmap">学習ロードマップ</a></li>
+            <li><a href="https://techtrain.dev/railway">実践問題集Railway</a></li>
+            <li><a href="https://techtrain.dev/media">テックメディア</a></li>
+            <li><a href="https://techtrain.dev/scout">スカウト・求人</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-heading">法人・学校法人様</p>
+          <ul class="footer-nav-list">
+            <li><a href="https://business.techtrain.dev/" target="_blank" rel="noopener">法人様はこちら</a></li>
+            <li><a href="https://education.techtrain.dev/" target="_blank" rel="noopener">学校法人様はこちら</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-heading">サポート</p>
+          <ul class="footer-nav-list">
+            <li><a href="https://techtrain.dev/faq">よくあるご質問</a></li>
+            <li><a href="https://techtrain.dev/privacy">プライバシーポリシー</a></li>
+            <li><a href="https://techtrain.dev/terms">利用規約</a></li>
+            <li><a href="https://techbowl.co.jp/" target="_blank" rel="noopener">運営会社</a></li>
+          </ul>
         </div>
       </div>
-      <p class="copyright">© 2024 TechBowl Inc. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://x.com/TechBowl1" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <img src="images/icon-x.svg" alt="X" width="16" height="16">
+        </a>
+        <a href="https://note.com/techbowl" target="_blank" rel="noopener" aria-label="note">
+          <img src="images/icon-note.svg" alt="note" width="16" height="16">
+        </a>
+      </div>
+      <p class="footer-copyright">&copy; TechBowl All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Fixed Bottom Bar -->
+  <div class="fixed-bottom-bar" id="fixedBottomBar">
+    <div class="fixed-bottom-bar-mascots">
+      <img src="images/riku.png" alt="" class="fixed-bottom-bar-mascot fixed-bottom-bar-mascot--front">
+      <img src="images/puru.png" alt="" class="fixed-bottom-bar-mascot fixed-bottom-bar-mascot--back">
+    </div>
+    <div class="fixed-bottom-bar-inner">
+      <img src="images/cta-badge-imadake.svg" alt="今だけ!" class="fixed-bottom-bar-badge">
+      <div class="fixed-bottom-bar-left">
+        <img src="images/cta-left-info.png" alt="1on1実施で 無料チケット 贈呈中" class="fixed-bottom-bar-left-img">
+      </div>
+      <div class="fixed-bottom-bar-divider">
+        <svg class="fixed-bottom-bar-notch fixed-bottom-bar-notch--top" width="14" height="7" viewBox="0 0 14 7" fill="none"><path d="M7 7C10.866 7 14 3.866 14 0H0C0 3.866 3.134 7 7 7Z" fill="#3d3d5c"/></svg>
+        <div class="fixed-bottom-bar-dash"></div>
+        <svg class="fixed-bottom-bar-notch fixed-bottom-bar-notch--bottom" width="14" height="7" viewBox="0 0 14 7" fill="none"><path d="M7 0C10.866 0 14 3.134 14 7H0C0 3.134 3.134 0 7 0Z" fill="#3d3d5c"/></svg>
+      </div>
+      <div class="fixed-bottom-bar-right">
+        <a href="https://techtrain.dev/signup" class="fixed-bottom-bar-cta">
+          <svg class="fixed-bottom-bar-cta-github" width="24" height="24" viewBox="0 0 20 20" fill="none"><path d="M10 0C4.475 0 0 4.475 0 10C0 14.425 2.863 18.163 6.838 19.488C7.338 19.575 7.525 19.275 7.525 19.013C7.525 18.775 7.513 17.988 7.513 17.15C5 17.613 4.35 16.538 4.15 15.975C4.038 15.688 3.55 14.8 3.125 14.563C2.775 14.375 2.275 13.913 3.113 13.9C3.9 13.888 4.463 14.625 4.65 14.925C5.55 16.438 6.988 16.013 7.563 15.75C7.65 15.1 7.913 14.663 8.2 14.413C5.975 14.163 3.65 13.3 3.65 9.475C3.65 8.388 4.038 7.488 4.675 6.788C4.575 6.538 4.225 5.513 4.775 4.138C4.775 4.138 5.613 3.875 7.525 5.163C8.325 4.938 9.175 4.825 10.025 4.825C10.875 4.825 11.725 4.938 12.525 5.163C14.438 3.863 15.275 4.138 15.275 4.138C15.825 5.513 15.475 6.538 15.375 6.788C16.013 7.488 16.4 8.375 16.4 9.475C16.4 13.313 14.063 14.163 11.838 14.413C12.2 14.725 12.513 15.325 12.513 16.263C12.513 17.6 12.5 18.675 12.5 19.013C12.5 19.275 12.688 19.588 13.188 19.488C17.258 18.113 20 14.296 20 10C20 4.475 15.525 0 10 0Z" fill="white"/></svg>
+          <span>GitHubで登録して始める</span>
+          <svg class="fixed-bottom-bar-cta-arrow" width="16" height="15" viewBox="0 0 16 15" fill="none"><path d="M0 9L0 0L2 0L2 7L12.172 7L8.222 3.05L9.636 1.636L16 8L9.636 14.364L8.222 12.95L12.172 9H0Z" fill="#FACC15"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

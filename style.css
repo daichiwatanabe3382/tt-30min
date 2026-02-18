@@ -179,15 +179,17 @@ input, select, textarea {
 }
 
 .btn-outline {
-  background: transparent;
-  color: #3d3d5c;
-  border: 1px solid #3d3d5c;
+  background: #f5a623;
+  color: var(--color-white);
+  border: none;
   padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--border-radius-lg);
 }
 
 .btn-outline:hover {
-  background: rgba(61, 61, 92, 0.1);
+  background: #e6951a;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-lg {
@@ -600,8 +602,8 @@ input, select, textarea {
 }
 
 .hero-btn-gold {
-  background: #ffc65a;
-  border-bottom: 5px solid #ffab0e;
+  background: #f5a623;
+  border-bottom: 5px solid #d98d10;
   color: var(--color-white);
 }
 
@@ -791,8 +793,8 @@ section {
 
 /* --- Clients Marquee Section --- */
 .clients {
-  background: #f0f0f0;
-  padding: 8px 0;
+  background: var(--color-white);
+  padding: 16px 0;
   overflow: hidden;
 }
 
@@ -820,31 +822,19 @@ section {
   animation: marquee-scroll-left 60s linear infinite;
 }
 
-.marquee-logos {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.client-logo {
-  height: 60px;
+.client-logo-strip {
+  height: 50px;
   width: auto;
-  object-fit: contain;
   flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
   .clients {
-    padding: 8px 0;
+    padding: 16px 0;
   }
 
-  .marquee {
-    margin-bottom: 8px;
-  }
-
-  .client-logo {
-    height: 80px;
+  .client-logo-strip {
+    height: 65px;
   }
 }
 
@@ -954,6 +944,11 @@ section {
   padding: 80px 0;
   position: relative;
   overflow: hidden;
+}
+
+.solution .container {
+  position: relative;
+  z-index: 1;
 }
 
 .solution-ellipse {
